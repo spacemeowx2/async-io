@@ -7,10 +7,10 @@ use std::sync::Arc;
 use std::thread;
 use std::time::Duration;
 
-use async_io::{Async, Timer};
 use futures_lite::{future, prelude::*};
 #[cfg(unix)]
 use tempfile::tempdir;
+use tiny_async_io::{Async, Timer};
 
 const LOREM_IPSUM: &[u8] = b"
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.

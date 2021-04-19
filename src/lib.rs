@@ -36,7 +36,7 @@
 //! Connect to `example.com:80`, or time out after 10 seconds.
 //!
 //! ```
-//! use async_io::{Async, Timer};
+//! use tiny_async_io::{Async, Timer};
 //! use futures_lite::{future::FutureExt, io};
 //!
 //! use std::net::{TcpStream, ToSocketAddrs};
@@ -102,7 +102,7 @@ fn duration_max() -> Duration {
 /// Sleep for 1 second:
 ///
 /// ```
-/// use async_io::Timer;
+/// use tiny_async_io::Timer;
 /// use std::time::Duration;
 ///
 /// # futures_lite::future::block_on(async {
@@ -113,7 +113,7 @@ fn duration_max() -> Duration {
 /// Timeout after 1 second:
 ///
 /// ```
-/// use async_io::Timer;
+/// use tiny_async_io::Timer;
 /// use futures_lite::FutureExt;
 /// use std::time::Duration;
 ///
@@ -146,7 +146,7 @@ impl Timer {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Timer;
+    /// use tiny_async_io::Timer;
     /// use std::time::Duration;
     ///
     /// # futures_lite::future::block_on(async {
@@ -162,7 +162,7 @@ impl Timer {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Timer;
+    /// use tiny_async_io::Timer;
     /// use std::time::{Duration, Instant};
     ///
     /// # futures_lite::future::block_on(async {
@@ -181,7 +181,7 @@ impl Timer {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Timer;
+    /// use tiny_async_io::Timer;
     /// use futures_lite::StreamExt;
     /// use std::time::{Duration, Instant};
     ///
@@ -199,7 +199,7 @@ impl Timer {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Timer;
+    /// use tiny_async_io::Timer;
     /// use futures_lite::StreamExt;
     /// use std::time::{Duration, Instant};
     ///
@@ -226,7 +226,7 @@ impl Timer {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Timer;
+    /// use tiny_async_io::Timer;
     /// use std::time::Duration;
     ///
     /// # futures_lite::future::block_on(async {
@@ -247,7 +247,7 @@ impl Timer {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Timer;
+    /// use tiny_async_io::Timer;
     /// use std::time::{Duration, Instant};
     ///
     /// # futures_lite::future::block_on(async {
@@ -282,7 +282,7 @@ impl Timer {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Timer;
+    /// use tiny_async_io::Timer;
     /// use futures_lite::StreamExt;
     /// use std::time::{Duration, Instant};
     ///
@@ -306,7 +306,7 @@ impl Timer {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Timer;
+    /// use tiny_async_io::Timer;
     /// use futures_lite::StreamExt;
     /// use std::time::{Duration, Instant};
     ///
@@ -457,7 +457,7 @@ impl Stream for Timer {
 /// Connect to a server and echo incoming messages back to the server:
 ///
 /// ```no_run
-/// use async_io::Async;
+/// use tiny_async_io::Async;
 /// use futures_lite::io;
 /// use std::net::TcpStream;
 ///
@@ -475,7 +475,7 @@ impl Stream for Timer {
 /// [`Async::write_with_mut()`]:
 ///
 /// ```no_run
-/// use async_io::Async;
+/// use tiny_async_io::Async;
 /// use std::net::TcpListener;
 ///
 /// # futures_lite::future::block_on(async {
@@ -515,7 +515,7 @@ impl<T: AsRawFd> Async<T> {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::{SocketAddr, TcpListener};
     ///
     /// # futures_lite::future::block_on(async {
@@ -569,7 +569,7 @@ impl<T: AsRawSocket> Async<T> {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::{SocketAddr, TcpListener};
     ///
     /// # futures_lite::future::block_on(async {
@@ -616,7 +616,7 @@ impl<T> Async<T> {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::TcpListener;
     ///
     /// # futures_lite::future::block_on(async {
@@ -633,7 +633,7 @@ impl<T> Async<T> {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::TcpListener;
     ///
     /// # futures_lite::future::block_on(async {
@@ -652,7 +652,7 @@ impl<T> Async<T> {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::TcpListener;
     ///
     /// # futures_lite::future::block_on(async {
@@ -676,7 +676,7 @@ impl<T> Async<T> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::TcpListener;
     ///
     /// # futures_lite::future::block_on(async {
@@ -697,7 +697,7 @@ impl<T> Async<T> {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::{TcpStream, ToSocketAddrs};
     ///
     /// # futures_lite::future::block_on(async {
@@ -728,7 +728,7 @@ impl<T> Async<T> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use futures_lite::future;
     /// use std::net::TcpListener;
     ///
@@ -759,7 +759,7 @@ impl<T> Async<T> {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use futures_lite::future;
     /// use std::net::{TcpStream, ToSocketAddrs};
     ///
@@ -787,7 +787,7 @@ impl<T> Async<T> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::TcpListener;
     ///
     /// # futures_lite::future::block_on(async {
@@ -820,7 +820,7 @@ impl<T> Async<T> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::TcpListener;
     ///
     /// # futures_lite::future::block_on(async {
@@ -856,7 +856,7 @@ impl<T> Async<T> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::UdpSocket;
     ///
     /// # futures_lite::future::block_on(async {
@@ -890,7 +890,7 @@ impl<T> Async<T> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::UdpSocket;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1102,7 +1102,7 @@ impl Async<TcpListener> {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::TcpListener;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1123,7 +1123,7 @@ impl Async<TcpListener> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::TcpListener;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1144,7 +1144,7 @@ impl Async<TcpListener> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use futures_lite::{pin, stream::StreamExt};
     /// use std::net::TcpListener;
     ///
@@ -1181,7 +1181,7 @@ impl Async<TcpStream> {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::{TcpStream, ToSocketAddrs};
     ///
     /// # futures_lite::future::block_on(async {
@@ -1213,7 +1213,7 @@ impl Async<TcpStream> {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use futures_lite::{io::AsyncWriteExt, stream::StreamExt};
     /// use std::net::{TcpStream, ToSocketAddrs};
     ///
@@ -1250,7 +1250,7 @@ impl Async<UdpSocket> {
     /// # Examples
     ///
     /// ```
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::UdpSocket;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1273,7 +1273,7 @@ impl Async<UdpSocket> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::UdpSocket;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1297,7 +1297,7 @@ impl Async<UdpSocket> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::UdpSocket;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1318,7 +1318,7 @@ impl Async<UdpSocket> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::UdpSocket;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1347,7 +1347,7 @@ impl Async<UdpSocket> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::UdpSocket;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1376,7 +1376,7 @@ impl Async<UdpSocket> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::UdpSocket;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1401,7 +1401,7 @@ impl Async<UdpSocket> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::net::UdpSocket;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1432,7 +1432,7 @@ impl Async<UnixListener> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::os::unix::net::UnixListener;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1453,7 +1453,7 @@ impl Async<UnixListener> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::os::unix::net::UnixListener;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1474,7 +1474,7 @@ impl Async<UnixListener> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use futures_lite::{pin, stream::StreamExt};
     /// use std::os::unix::net::UnixListener;
     ///
@@ -1513,7 +1513,7 @@ impl Async<UnixStream> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::os::unix::net::UnixStream;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1539,7 +1539,7 @@ impl Async<UnixStream> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::os::unix::net::UnixStream;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1568,7 +1568,7 @@ impl Async<UnixDatagram> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::os::unix::net::UnixDatagram;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1585,7 +1585,7 @@ impl Async<UnixDatagram> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::os::unix::net::UnixDatagram;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1601,7 +1601,7 @@ impl Async<UnixDatagram> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::os::unix::net::UnixDatagram;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1620,7 +1620,7 @@ impl Async<UnixDatagram> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::os::unix::net::UnixDatagram;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1641,7 +1641,7 @@ impl Async<UnixDatagram> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::os::unix::net::UnixDatagram;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1666,7 +1666,7 @@ impl Async<UnixDatagram> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::os::unix::net::UnixDatagram;
     ///
     /// # futures_lite::future::block_on(async {
@@ -1691,7 +1691,7 @@ impl Async<UnixDatagram> {
     /// # Examples
     ///
     /// ```no_run
-    /// use async_io::Async;
+    /// use tiny_async_io::Async;
     /// use std::os::unix::net::UnixDatagram;
     ///
     /// # futures_lite::future::block_on(async {

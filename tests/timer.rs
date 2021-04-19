@@ -4,8 +4,8 @@ use std::sync::{Arc, Mutex};
 use std::thread;
 use std::time::{Duration, Instant};
 
-use async_io::Timer;
 use futures_lite::{future, FutureExt, StreamExt};
+use tiny_async_io::Timer;
 
 fn spawn<T: Send + 'static>(
     f: impl Future<Output = T> + Send + 'static,

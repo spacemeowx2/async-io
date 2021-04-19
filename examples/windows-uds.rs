@@ -10,10 +10,10 @@
 fn main() -> std::io::Result<()> {
     use std::path::PathBuf;
 
-    use async_io::Async;
     use blocking::Unblock;
     use futures_lite::{future, io, prelude::*};
     use tempfile::tempdir;
+    use tiny_async_io::Async;
     use uds_windows::{UnixListener, UnixStream};
 
     async fn client(addr: PathBuf) -> io::Result<()> {

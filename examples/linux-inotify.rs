@@ -11,9 +11,9 @@ fn main() -> std::io::Result<()> {
     use std::ffi::OsString;
     use std::io;
 
-    use async_io::Async;
     use futures_lite::future;
     use inotify::{EventMask, Inotify, WatchMask};
+    use tiny_async_io::Async;
 
     type Event = (OsString, EventMask);
 

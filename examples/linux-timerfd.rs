@@ -12,9 +12,9 @@ fn main() -> std::io::Result<()> {
     use std::os::unix::io::AsRawFd;
     use std::time::{Duration, Instant};
 
-    use async_io::Async;
     use futures_lite::future;
     use timerfd::{SetTimeFlags, TimerFd, TimerState};
+    use tiny_async_io::Async;
 
     /// Converts a [`nix::Error`] into [`std::io::Error`].
     fn io_err(err: nix::Error) -> io::Error {

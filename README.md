@@ -47,7 +47,7 @@ processing I/O events in case no other threads are.
 Connect to `example.com:80`, or time out after 10 seconds.
 
 ```rust
-use async_io::{Async, Timer};
+use tiny_async_io::{Async, Timer};
 use futures_lite::{future::FutureExt, io};
 
 use std::net::{TcpStream, ToSocketAddrs};

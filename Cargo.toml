@@ -1,5 +1,5 @@
 [package]
-name = "async-io"
+name = "tiny-async-io"
 # When publishing a new version:
 # - Update CHANGELOG.md
 # - Create "v1.x.y" git tag

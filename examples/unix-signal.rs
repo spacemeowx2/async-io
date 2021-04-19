@@ -10,8 +10,8 @@
 fn main() -> std::io::Result<()> {
     use std::os::unix::{io::AsRawFd, net::UnixStream};
 
-    use async_io::Async;
     use futures_lite::{future, prelude::*};
+    use tiny_async_io::Async;
 
     future::block_on(async {
         // Create a Unix stream that receives a byte on each signal occurrence.

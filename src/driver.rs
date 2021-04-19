@@ -91,10 +91,10 @@ fn main_loop(parker: parking::Parker) {
 /// # Examples
 ///
 /// ```
-/// use async_io::Timer;
+/// use tiny_async_io::Timer;
 /// use std::time::Duration;
 ///
-/// async_io::block_on(async {
+/// tiny_async_io::block_on(async {
 ///     // This timer will likely be processed by the current
 ///     // thread rather than the fallback "async-io" thread.
 ///     Timer::after(Duration::from_millis(1)).await;
